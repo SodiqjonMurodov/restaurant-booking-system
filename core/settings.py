@@ -25,8 +25,6 @@ DEBUG = env("DEBUG")
 
 ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(',')
 
-HOST = env("HOST")
-
 # Application definition
 INSTALLED_APPS = [
     # third party apps
@@ -127,6 +125,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
