@@ -17,7 +17,7 @@ def send_confirmation_email(reservation):
             Здравствуйте, {reservation.full_name}!
 
             Пожалуйста, подтвердите своё бронирование, перейдя по ссылке ниже:
-            http://localhost:3000/confirm/{token}
+            https://restaurant-ferro-soft.netlify.app/confirm/{token}
 
             Спасибо за выбор нашего ресторана!
             """,
