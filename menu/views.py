@@ -4,7 +4,7 @@ from .serializers import MenuSerializer
 
 
 class MenuHomeListApiView(generics.ListAPIView):
-    queryset = Menu.objects.all()[:3]
+    queryset = Menu.objects.all()
     serializer_class = MenuSerializer
 
 
