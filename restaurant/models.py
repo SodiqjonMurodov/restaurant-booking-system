@@ -25,8 +25,6 @@ class Company(BaseModel):
     latitude = models.FloatField(blank=True, null=True)
     longitude = models.FloatField(blank=True, null=True)
     header_image = models.ImageField(upload_to='layout', null=True, blank=True)
-    title_image = models.ImageField(upload_to='layout', null=True, blank=True)
-    logo = models.ImageField(upload_to='layout', null=True, blank=True)
 
     def __str__(self):
         return f'{self.name}'

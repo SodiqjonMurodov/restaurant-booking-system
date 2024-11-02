@@ -28,6 +28,9 @@ ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(',')
 INSTALLED_APPS = [
     # third party apps
     'jazzmin',
+    'rest_framework',
+    'drf_yasg',
+    'corsheaders',
 
     # django apps
     'django.contrib.admin',
@@ -41,11 +44,6 @@ INSTALLED_APPS = [
     'booking',
     'restaurant',
     'menu',
-
-    # third party apps
-    'rest_framework',
-    'drf_yasg',
-    'corsheaders',
 
 ]
 
@@ -111,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-US'
+LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'Asia/Tashkent'
 
