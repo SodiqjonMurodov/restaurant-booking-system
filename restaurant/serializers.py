@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Cooks, Gallery, Company, MediaLinks, Testimonial, Service, Post
+from .models import Cooks, Gallery, Company, MediaLinks, Testimonial, Service, Post, Menu
 
 
 class CooksHomeSerializer(serializers.ModelSerializer):
@@ -46,4 +46,8 @@ class ServiceSerializer(serializers.ModelSerializer):
         fields = ['id', 'title', 'subtitle1', 'subtitle2', 'description1', 'description2', 'description3', 'image']
 
 
+class MenuSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Menu
+        fields = ['id', 'title', 'image', 'file']
         

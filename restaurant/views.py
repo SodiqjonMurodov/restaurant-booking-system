@@ -3,9 +3,9 @@ from rest_framework.views import APIView
 from django.http import FileResponse
 from rest_framework.exceptions import NotFound
 from rest_framework.pagination import PageNumberPagination
-from .models import Cooks, Gallery, Company, Service, Testimonial, Post
+from .models import Cooks, Gallery, Company, Service, Testimonial, Post, Menu
 from .serializers import CooksHomeSerializer, GallerySerializer, CompanySerializer, TestimonialSerializer, \
-    ServiceSerializer, PostsListSerializer
+    ServiceSerializer, PostsListSerializer, MenuSerializer
 
 
 class DownloadImages(APIView):
@@ -76,6 +76,11 @@ class TestimonialsHomeListApiView(generics.ListAPIView):
 class ServicesHomeListApiView(generics.ListAPIView):
     queryset = Service.objects.all()[:2]
     serializer_class = ServiceSerializer
+
+
+class MenuListApiView(generics.ListAPIView):
+    queryset = Menu.objects.all()
+    serializer_class = MenuSerializer
 
     
     

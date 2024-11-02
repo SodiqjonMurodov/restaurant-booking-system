@@ -119,4 +119,17 @@ class Service(BaseModel):
     class Meta:
         verbose_name = 'Service'
         verbose_name_plural = 'Services'
-        
+
+
+class Menu(BaseModel):
+    title = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='menus')
+    file = models.FileField(upload_to='menu-files')
+
+    def __str__(self):
+        return f'{self.title}'
+
+    class Meta:
+        verbose_name = 'Menu'
+        verbose_name_plural = 'Menu'
+
